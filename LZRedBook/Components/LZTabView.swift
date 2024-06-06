@@ -7,26 +7,45 @@
 
 import SwiftUI
 
+
+
 struct LZTabView:View {
     
-    var safeEdgeInsets: EdgeInsets
+   public var safeEdgeInsets: EdgeInsets
+    
+    private let buttonDimen: CGFloat = 55
      
     var body: some View{
-        ZStack{
-            HStack(spacing: 0, content: {
-                ForEach(0..<3) { item in
-                    Button(action: {
-                        
-                    }, label: {
-                        VStack{
-                            Image(systemName: "pencil")
-                            Text("按钮")
-                        }
-                    })
-                    .frame(maxWidth: .infinity)
+        HStack {
+            
+            TabBarButton(imageName: "house")
+                .frame(width: 55, height: 55)
+                .onTapGesture {
+                    print("----- 点击 1")
                 }
-            })
-        }.background(Color.orange)
+            Spacer()
+            
+            TabBarButton(imageName: "globe")
+                .frame(width: 55, height: 55)
+                .onTapGesture {
+                    print("----- 点击 2")
+                }
+            
+            
+            Spacer()
+            
+    
+            
+            TabBarButton(imageName: "pencil")
+                .frame(width: 55, height: 55)
+                .onTapGesture {
+                    print("----- 点击 3")
+                }
+        }
+        .frame(width: (buttonDimen * 3 + 60))
+        .tint(Color.black)
+        .background(Color.orange)
+        .clipShape(Capsule(style: .continuous))
         
         // 再添加一个top的边距
 //        .padding(.top, 20)
@@ -38,4 +57,15 @@ struct LZTabView:View {
 
 #Preview {
     LZTabView(safeEdgeInsets: EdgeInsets(top: 59, leading: 0, bottom: 34, trailing: 0))
+}
+
+
+private struct TabBarButton: View {
+    let imageName: String
+    var body: some View {
+        Image(systemName: imageName)
+            .renderingMode(.template)
+            .tint(.black)
+            .fontWeight(.bold)
+    }
 }

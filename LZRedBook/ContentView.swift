@@ -42,10 +42,10 @@ struct ContentView: View {
                 
                 
                 LZTabView(safeEdgeInsets: proxy.safeAreaInsets)
-                    .frame(height: 44 + proxy.safeAreaInsets.bottom)
+//                    .frame(height: 44 + proxy.safeAreaInsets.bottom)
                     .padding(.bottom)
 //                    .offset(y:-proxy.safeAreaInsets.bottom)
-                    .background(Color.purple)
+//                    .background(Color.purple)
             })
         })
         
@@ -63,3 +63,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+

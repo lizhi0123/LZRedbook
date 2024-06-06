@@ -13,20 +13,21 @@ struct LZTabView:View {
     
    public var safeEdgeInsets: EdgeInsets
     
-    private let buttonDimen: CGFloat = 55
+    private let buttonDimen: CGFloat = LZScreenSize.width / 5
+    private let buttonHeight: CGFloat = 60
      
     var body: some View{
         HStack {
             
             TabBarButton(imageName: "house")
-                .frame(width: 55, height: 55)
+                .frame(width: buttonDimen, height: buttonHeight)
                 .onTapGesture {
                     print("----- 点击 1")
                 }
             Spacer()
             
             TabBarButton(imageName: "globe")
-                .frame(width: 55, height: 55)
+                .frame(width: buttonDimen, height: buttonHeight)
                 .onTapGesture {
                     print("----- 点击 2")
                 }
@@ -37,20 +38,16 @@ struct LZTabView:View {
     
             
             TabBarButton(imageName: "pencil")
-                .frame(width: 55, height: 55)
+                .frame(width: buttonDimen, height: buttonHeight)
                 .onTapGesture {
                     print("----- 点击 3")
                 }
         }
-        .frame(width: (buttonDimen * 3 + 60))
+        .padding(.all,0)
         .tint(Color.black)
         .background(Color.orange)
-        .clipShape(Capsule(style: .continuous))
-        
-        // 再添加一个top的边距
-//        .padding(.top, 20)
-        // 在自定义的tabbar内部添加一个底部的边距，高度等于安全区域底部的高度
-//        .padding(.bottom, safeEdgeInsets.bottom)
+        .ignoresSafeArea()
+
        
     }
 }

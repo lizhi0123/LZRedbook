@@ -42,8 +42,10 @@ struct ContentView: View {
                 
                 
                 LZTabView(safeEdgeInsets: proxy.safeAreaInsets)
-//                    .frame(height: 44 + proxy.safeAreaInsets.bottom)
-                    .padding(.bottom)
+                    .frame(height: 44 + proxy.safeAreaInsets.bottom)
+//                    .padding(.bottom)
+                    .ignoresSafeArea()
+                    .background(Color.white)
 //                    .offset(y:-proxy.safeAreaInsets.bottom)
 //                    .background(Color.purple)
             })

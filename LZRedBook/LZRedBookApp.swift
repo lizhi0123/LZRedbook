@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct LZRedBookApp: App {
+    @Environment(\.colorScheme) var colorScheme
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -10,43 +10,53 @@ import SwiftUI
 struct ContentView: View {
     @State private var tabSection: Int = 0
     
+    
+    
     var body: some View {
-       
-        /*
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-        */
-        NavigationView(content: {
-//            NavigationLink(destination: Text("Destination")) { /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/ }
-            TabView(selection: $tabSection,
-                    content:  {
-                HomeMainPage()
-                    .tabItem {
-                        HStack{
-                            Text("首页").padding()
+        GeometryReader(content: { proxy in
+            ZStack(alignment: .bottom, content: {
+                //        NavigationView(content: {
+                //            NavigationLink(destination: Text("Destination")) { /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/ }
+                TabView(selection: $tabSection,
+                        content: {
+//                            HomeMainPage()
+//                                .frame(maxWidth: CGFloat.infinity, maxHeight: CGFloat.infinity)//建议视图最大
+//                                .background(Color.red)
+//                                .tag(1)
+                    HomeMainPage()
+                        .tabItem {
+                            Text("HOme")
+                            Image(systemName: "globe")
                         }
-                        
-                    }
-                    .tag(1)
-                PostPage()
-                    .tabItem {
-                        VStack {
-                            Text("发帖")
-                            Image(systemName: "plus.square.fill").background(Color.red).foregroundStyle(Color.red)
-                                .padding()
-                        }
-                        
-                    }.tag(2)
+                    
+                            PostPage()
+                                .background(Color.blue)
+                                .tag(2)
+
+                            MyPage()
+                                .background(Color.green)
+                                .tag(3)
+                })
+                //        })
                 
-                MyPage()
-                    .tabItem { Text("我").padding() }.tag(3)
+                
+                
+                LZTabView(safeEdgeInsets: proxy.safeAreaInsets)
+                    .frame(height: 44 + proxy.safeAreaInsets.bottom)
+                    .padding(.bottom)
+//                    .offset(y:-proxy.safeAreaInsets.bottom)
+                    .background(Color.purple)
             })
         })
+        
+    }
+    
+    init(){
+       let tabViewsize =  UITableView.appearance().frame.size
+//        print("--- tabviewSize = ",tabViewsize)
+//        UITabBar.appearance().backgroundColor = UIColor.purple
+        
+    
     }
 }
 

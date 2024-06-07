@@ -13,23 +13,23 @@ struct ContentView: View {
         GeometryReader(content: { proxy in
             ZStack(alignment: .bottom, content: {
 
-                TabView(selection: $selectedTab,
-                        content: {
-
-                    HomeMainPage()
+                TabView(selection: $selectedTab) {
+                    Text("HOME")
+    //                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    //                    .background(Color.red.opacity(0.5))
                         .tabItem {
                             Text("HOme")
                             Image(systemName: "globe")
-                                .tag(1)
                         }
-
-                    MyPage()
-                        .tabItem {
-                            Text("我")
-                            Image(systemName: "pencil")
-                                .tag(1)
-                        }
-                })
+                        .tag(0)
+                    
+                    Text("EXPLORE")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.yellow.opacity(0.5))
+                        .tag(1)
+                    
+                    
+                }
                 
                 CustomBottomTabBarView(currentTab: $selectedTab, safeEdgeInsets: proxy.safeAreaInsets)
                     .frame(height: 44 + proxy.safeAreaInsets.bottom)

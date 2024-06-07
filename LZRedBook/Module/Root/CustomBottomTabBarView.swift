@@ -15,14 +15,17 @@ struct CustomBottomTabBarView:View {
     
    public var safeEdgeInsets: EdgeInsets
     
-    private let buttonDimen: CGFloat = LZScreenSize.width / 3
+    private let buttonDimen: CGFloat = LZScreenSize.kScreenWidth / 3
     private let buttonHeight: CGFloat = 60
     private let normalColor:Color = Color(uiColor: UIColor(hexString: "#8c8c8c")!)
     private let selectedColor:Color = .black
      
     var body: some View{
         ZStack {
-            
+            //和父视图 等宽，等高
+            Text("")
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+                .background(Color(uiColor: UIColor(hexString: "#fac2c2")!))
             HStack {
                 Button(action: {
                    currentTab = 0
@@ -71,6 +74,7 @@ struct CustomBottomTabBarView:View {
                
             }
         }
+//        .ignoresSafeArea(.all,edges: Edge.Set.bottom)
 
 //        .padding(.all,0)
 //        .tint(Color.black)

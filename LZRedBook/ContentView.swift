@@ -14,16 +14,17 @@ struct ContentView: View {
             ZStack(alignment: .bottom, content: {
 
                 TabView(selection: $selectedTab) {
-                    Text("HOME")
-    //                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    //                    .background(Color.red.opacity(0.5))
+//                    Text("HOME")
+                    HomeMainPage()
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        .background(Color.red.opacity(0.5))
                         .tabItem {
                             Text("HOme")
                             Image(systemName: "globe")
                         }
                         .tag(0)
                     
-                    Text("EXPLORE")
+                    MyPage()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(Color.yellow.opacity(0.5))
                         .tag(1)

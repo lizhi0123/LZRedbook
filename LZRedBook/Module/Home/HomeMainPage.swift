@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeMainPage:View {
-  @State  var selectedTab: Int = 0
+    @State private var selectedTab: Int = 0
     var body: some View {
         VStack {
             HomeMainTabTitleView(selectedTab: $selectedTab)
@@ -19,16 +19,23 @@ struct HomeMainPage:View {
                     Image(systemName: "globe")
                     Text("Home")
                 }
+                .tag(0)
+                
                 Text("Second Tab").tabItem {
                     Image(systemName: "pencil")
                     Text("Add")
                 }
+                .tag(1)
+                
                 Text("Third Tab").tabItem {
                     Text("Favorite")
                 }
+                .tag(2)
+                
                 Text("Fourth Tab").tabItem {
                     Text("Profile")
-                }
+                }.tag(3)
+                
             })
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never))
             .background(Color.blue)

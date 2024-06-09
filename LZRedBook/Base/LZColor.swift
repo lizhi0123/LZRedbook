@@ -9,6 +9,6 @@ import Foundation
 import SwiftUI
 
 enum LZColor {
-    static let reguralBlack:Color = Color(.black)
-    static let regularGray:Color = Color(uiColor: UIColor(hexString: "#8c8c8c")!)
+    static let titleBlack:Color = Color(.black)
+    static let titleGray:Color = Color(uiColor: UIColor(hexString: "#8c8c8c")!)
 }

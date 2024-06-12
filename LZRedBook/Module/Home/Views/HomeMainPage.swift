@@ -14,6 +14,10 @@ struct HomeMainPage:View {
             VStack {
                 HomeMainTabTitleView(selectedTab: $selectedTab)
                     .frame(height: 44)
+                
+                HomeAttent()
+                
+                /*
                 TabView(selection: $selectedTab,
                         content:  {
                     HomeAttent().tabItem {
@@ -40,6 +44,7 @@ struct HomeMainPage:View {
                 })
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never))
                 .background(Color.blue)
+                */
 //                .padding(.all, 0 )
             }
 //            .padding(.bottom,0)

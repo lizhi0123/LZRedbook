@@ -13,16 +13,24 @@ struct LZHomeAttentPostRow:View {
     
     
     var body: some View {
-        
-        LZHomeAttentAuthorLine()
-        Image(systemName: "photo.artframe")
-            .resizable()
-            .frame(width: 100,height: 100)
-            .aspectRatio(contentMode: .fit)
+        VStack {
+            LZHomeAttentAuthorLine()
+            Image(systemName: "photo.artframe")
+                .resizable()
+//            .frame(width: 100,height: 100)
+                .aspectRatio(contentMode: .fill)
 //            .frame(maxWidth: .infinity)
 //            .padding(.all,1)
 //            .frame(maxHeight: 500)
-        Text("LZHomeAttentPostRow")
+        
+            HStack{
+                Text("内容内容")
+                    .lineLimit(1)
+                Spacer()
+            }
+            .padding(EdgeInsets(top: 5, leading: 15, bottom: 20, trailing: 15))
+            
+        }
     }
 }
 

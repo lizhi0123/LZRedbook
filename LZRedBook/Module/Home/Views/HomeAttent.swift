@@ -14,34 +14,17 @@ struct HomeAttent:View {
         LZHomePostModel(id: "2", name: "name2")
     ]
     var body: some View {
-           
-            VStack {
-                HStack{
-                    Text("test")
-                    Spacer()
-                }
-                .background(Color.brown)
-                .padding(.all,3)
-                
+        
+        List {
+            ForEach(posts) { post in
                 LZHomeAttentPostRow()
-                
-                
-                List{
-                    ForEach(posts) { post in
-                        LZHomeAttentPostRow()
-                    }
-                }
-                
-                //.frame(maxWidth: .infinity)
-    //            .padding(.all,0)
-    //            .listStyle(.plain)
-                
-                
-    //            Spacer()
-                Text("home attent end")
             }
-            .background(Color.yellow)
-       
+            .listRowInsets(EdgeInsets())//去除左右间隙
+        }
+        .listStyle(.plain)
+        .padding(0)
+        
+   
     }
 }
 

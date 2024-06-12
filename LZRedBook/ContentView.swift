@@ -17,16 +17,15 @@ struct ContentView: View {
 //                    Text("HOME")
                 HomeMainPage()
 //                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.red.opacity(0.5))
-                    .tabItem {
-                        Text("HOme")
-                        Image(systemName: "globe")
-                    }
+//                    .tabItem {
+//                        Text("HOme")
+//                        Image(systemName: "globe")
+//                    }
                     .tag(0)
             
                 MyPage()
 //                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.yellow.opacity(0.5))
+//                    .background(Color.yellow.opacity(0.5))
                     .tag(1)
             }
             
@@ -35,7 +34,6 @@ struct ContentView: View {
                         Spacer()
                         CustomBottomTabBarView(currentTab: $selectedTab, safeEdgeInsets: proxy.safeAreaInsets)
                             .frame(height: 48 + proxy.safeAreaInsets.bottom)
-                            .background(Color.white)
                     }
                     .ignoresSafeArea()
                    
@@ -50,7 +48,7 @@ struct ContentView: View {
     init() {
         let tabViewsize = UITableView.appearance().frame.size
 //        print("--- tabviewSize = ",tabViewsize)
-        UITabBar.appearance().backgroundColor = UIColor.purple
+//        UITabBar.appearance().backgroundColor = UIColor.purple
     }
 }
 

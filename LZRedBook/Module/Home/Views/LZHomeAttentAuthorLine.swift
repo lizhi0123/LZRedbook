@@ -16,9 +16,12 @@ struct LZHomeAttentAuthorLine:View {
                 .resizable()
                 .frame(width: 40,height: 40)
                 .foregroundStyle(Color.gray)
-                .padding()
+                .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 5))
             
-//            Spacer()
+            Text("作者张三")
+                .foregroundStyle(LZColor.titleBlack)
+                .font(LZFont.largeTitleFont)
+            Spacer()
         }
     }
 }

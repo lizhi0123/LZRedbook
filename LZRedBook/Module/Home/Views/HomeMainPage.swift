@@ -11,11 +11,12 @@ struct HomeMainPage:View {
     @State private var selectedTab: Int = 0
     var body: some View {
         GeometryReader { proxy in
-            VStack {
+            VStack(spacing: 0) {
                 HomeMainTabTitleView(selectedTab: $selectedTab)
                     .frame(height: 44)
                 
                 HomeAttent()
+                    .padding(.all,0)
                 
                 /*
                 TabView(selection: $selectedTab,
@@ -48,7 +49,6 @@ struct HomeMainPage:View {
 //                .padding(.all, 0 )
             }
 //            .padding(.bottom,0)
-            .background(Color.green)
 //            .padding(.bottom,proxy.safeAreaInsets.bottom)
 //            .safeAreaPadding(<#T##insets: EdgeInsets##EdgeInsets#>)
         }

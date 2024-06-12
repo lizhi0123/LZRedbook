@@ -21,12 +21,9 @@ struct CustomBottomTabBarView:View {
     private let selectedColor:Color = .black
      
     var body: some View{
-        ZStack {
-            //和父视图 等宽，等高
-            Text("")
-                .frame(maxWidth: .infinity,maxHeight: .infinity)
-                .background(Color(uiColor: UIColor(hexString: "#fac2c2")!))
-            HStack {
+        VStack {
+
+            HStack{
                 Button(action: {
                    currentTab = 0
                 }, label: {
@@ -73,7 +70,9 @@ struct CustomBottomTabBarView:View {
                 
                
             }
+            Spacer()
         }
+//        .background(Color.yellow)
 //        .ignoresSafeArea(.all,edges: Edge.Set.bottom)
 
 //        .padding(.all,0)

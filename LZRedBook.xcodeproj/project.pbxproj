@@ -22,6 +22,8 @@
 		6D73FB1D2C1066F30004355C /* HomeMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D73FB1C2C1066F30004355C /* HomeMainPage.swift */; };
 		6D73FB1F2C10672A0004355C /* PostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D73FB1E2C10672A0004355C /* PostPage.swift */; };
 		6D73FB212C1067530004355C /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D73FB202C1067530004355C /* MyPage.swift */; };
+		6DF8B2D32C1948890025AD69 /* HomeFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8B2D22C1948890025AD69 /* HomeFind.swift */; };
+		6DF8B2D52C1949320025AD69 /* HomeAttent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8B2D42C1949320025AD69 /* HomeAttent.swift */; };
 		775F1203F1BB402C16798A07 /* Pods_LZRedBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E54C816EC785DF06FD8ECE /* Pods_LZRedBook.framework */; };
 		D19B62A99D645230D5481C9F /* Pods_LZRedBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9080F848C40764E274134954 /* Pods_LZRedBookTests.framework */; };
 		FBCA44EA982FD1A32EA8E241 /* Pods_LZRedBook_LZRedBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC406EDF5E185C4E777ED47 /* Pods_LZRedBook_LZRedBookUITests.framework */; };
@@ -67,6 +69,8 @@
 		6D73FB1C2C1066F30004355C /* HomeMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainPage.swift; sourceTree = "<group>"; };
 		6D73FB1E2C10672A0004355C /* PostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPage.swift; sourceTree = "<group>"; };
 		6D73FB202C1067530004355C /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		6DF8B2D22C1948890025AD69 /* HomeFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFind.swift; sourceTree = "<group>"; };
+		6DF8B2D42C1949320025AD69 /* HomeAttent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAttent.swift; sourceTree = "<group>"; };
 		9080F848C40764E274134954 /* Pods_LZRedBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZRedBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90851F8DABDFF8D241F5533E /* Pods-LZRedBook-LZRedBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZRedBook-LZRedBookUITests.release.xcconfig"; path = "Target Support Files/Pods-LZRedBook-LZRedBookUITests/Pods-LZRedBook-LZRedBookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		936AA67044CC6097F58153F4 /* Pods-LZRedBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZRedBookTests.release.xcconfig"; path = "Target Support Files/Pods-LZRedBookTests/Pods-LZRedBookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 			children = (
 				6D73FB1C2C1066F30004355C /* HomeMainPage.swift */,
 				6D2D6BF92C1318E400D5338A /* HomeMainTabTitleView.swift */,
+				6DF8B2D22C1948890025AD69 /* HomeFind.swift */,
+				6DF8B2D42C1949320025AD69 /* HomeAttent.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF8B2D32C1948890025AD69 /* HomeFind.swift in Sources */,
 				6D73FB212C1067530004355C /* MyPage.swift in Sources */,
 				6D73FB1F2C10672A0004355C /* PostPage.swift in Sources */,
 				6D2D6BF22C107C9F00D5338A /* CustomBottomTabBarView.swift in Sources */,
@@ -508,6 +515,7 @@
 				6D2D6BFE2C131CC800D5338A /* LZFont.swift in Sources */,
 				6D73FB1D2C1066F30004355C /* HomeMainPage.swift in Sources */,
 				6D73FAF12C1059240004355C /* ContentView.swift in Sources */,
+				6DF8B2D52C1949320025AD69 /* HomeAttent.swift in Sources */,
 				6D73FAEF2C1059240004355C /* LZRedBookApp.swift in Sources */,
 				6D2D6BFA2C1318E400D5338A /* HomeMainTabTitleView.swift in Sources */,
 				6D2D6BFC2C131CB900D5338A /* LZColor.swift in Sources */,

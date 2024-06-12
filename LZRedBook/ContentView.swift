@@ -32,9 +32,15 @@ struct ContentView: View {
                         .tag(1)
                 }
                 
-//                CustomBottomTabBarView(currentTab: $selectedTab, safeEdgeInsets: proxy.safeAreaInsets)
-//                    .frame(height: 44 + proxy.safeAreaInsets.bottom)
-//                    .background(Color.white)
+                VStack {
+                    Spacer()
+                    CustomBottomTabBarView(currentTab: $selectedTab, safeEdgeInsets: proxy.safeAreaInsets)
+                        .frame(height: 48 + proxy.safeAreaInsets.bottom)
+                        .background(Color.white)
+                }
+                .ignoresSafeArea()
+                
+               
             }
         })
         
